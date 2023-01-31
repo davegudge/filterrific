@@ -105,10 +105,10 @@ Filterrific.init = function() {
 };
 
 
-// Initialize event observers on document ready and turbolinks page:load
-jQuery(document).on('turbolinks:load', function() {
-  // Prevent double initilisation. With turbolinks 5 this function
-  // will be called twice: on 'ready' and 'turbolinks:load'
+// Initialize event observers on document ready and turbo[links] page:load
+jQuery(document).on('turbolinks:load, turbo:load', function() {
+  // Prevent double initilisation. With turbo[links] this function
+  // will be called twice: on 'ready' and 'turbo[links]:load'
   jQuery(document).off('ready page:load')
   Filterrific.init();
 });
