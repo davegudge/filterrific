@@ -129,8 +129,8 @@ Filterrific.observe_field = function(inputs_selector, frequency, callback) {
       }
     };
 
-    var removed = function() {
-      return input.closest('html').length == 0
+    var removed = function () {
+      return input.closest('html') === null;
     };
 
     var reset = function() {
